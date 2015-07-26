@@ -43,11 +43,6 @@ Output text file contains a tidy data set named TidyDataSet.txt; calculating ave
 
 It contains the following data:
 
-######Grouping criteria: 
-The fields average is calculated and grouped by:
-- activity_desc
-- subject_id
-
 ######Measures: 
 Mean() and std() measures type average:
 - tBodyAcc_mean_X
