@@ -18,10 +18,18 @@ The data linked to from the website represent data collected from the accelerome
 ##Creating the tidy datafile
 
 ###Guide to create the tidy data file
-Description on how to create the tidy data file (1. download the data, ...)/
+####Environment
+It's assumed that the dataset is already downloaded and unzip into local working R directory
 
-###Cleaning of the data
-Short, high-level description of what the cleaning script does. [link to the readme document that describes the code in greater detail]()
+####Libraries Used
+The libraries used is data.table & dplyr. Installation might be required through `install.package()` if libraries are not loaded.
+`library(data.table)`    
+`library(dplyr)`
+
+####Libraries Used
+
+
+
 
 ##Description of the variables in the tiny_data.txt file
 General description of the file including:
@@ -29,24 +37,4 @@ General description of the file including:
  - Summary of the data
  - Variables present in the dataset
 
-(you can easily use Rcode for this, just load the dataset and provide the information directly form the tidy data file)
 
-###Variable 1 (repeat this section for all variables in the dataset)
-Short description of what the variable describes.
-
-Some information on the variable including:
- - Class of the variable
- - Unique values/levels of the variable
- - Unit of measurement (if no unit of measurement list this as well)
- - In case names follow some schema, describe how entries were constructed (for example time-body-gyroscope-z has 4 levels of descriptors. Describe these 4 levels). 
-
-(you can easily use Rcode for this, just load the dataset and provide the information directly form the tidy data file)
-
-####Notes on variable 1:
-If available, some additional notes on the variable not covered elsewehere. If no notes are present leave this section out.
-
-##Sources
-Sources you used if any, otherise leave out.
-
-##Annex
-If you used any code in the codebook that had the echo=FALSE attribute post this here (make sure you set the results parameter to 'hide' as you do not want the results to show again)
