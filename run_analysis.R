@@ -36,7 +36,7 @@ featuresNames <- read.table("features.txt")
 ##we want to exclude meanFreq(). hence need to grep mean() or std() only. "\\" need to be use because "()" is metacharacter then append obs 562 & 563
 extractFeaturesList<-grep("std\\(\\)|mean\\(\\)",featuresNames$V2) %>% c(562,563)
 print(extractFeaturesList)
-##assign only wanted features to new featuresData
+##assign only wanted features to new Data
 Data <- mergedData[,extractFeaturesList]
 head(Data)
 ##update data for featuresNames based on extractFeaturesList only
