@@ -137,8 +137,6 @@ The libraries used is data.table & dplyr. Installation might be required through
 General description of the file:
  - Dimensions of the dataset
  * 10299 x 68
- - Summary of the data
- * fdfdf 
  - Variables present in the dataset
  * Refer to CodeBook.md in this repository
 
