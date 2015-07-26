@@ -8,6 +8,14 @@ In this repository, you find:
 * CodeBook.md : the CodeBook reference to the variables in TidyDataSet.txt
 * README.md : the analysis of the code in run_analysis.R
 
+This run_analysis.R executes the course project requirements, not necessarily in the same order. The requirements are:
+
+* Req 1. Merges the training and the test sets to create one data set.
+* Req 2. Extracts only the measurements on the mean and standard deviation for each measurement.
+* Req 3. Uses descriptive activity names to name the activities in the data set.
+* Req 4. Appropriately labels the data set with descriptive variable names.
+* Req 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each          activity and each subject.
+
 ##Study design and data processing
 
 ###Collection of the raw data
