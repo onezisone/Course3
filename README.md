@@ -4,8 +4,8 @@ As part of project requirement in "Getting and Cleaning Data" course, this R cod
 In this repository, you find:
 
 * run_analysis.R : the R-code run on the data set
-* Tidy.txt : the clean data extracted from the original data using run_analysis.R
-* CodeBook.md : the CodeBook reference to the variables in Tidy.txt
+* TidyDataSet.txt : the tidy data set extracted from the original data using run_analysis.R
+* CodeBook.md : the CodeBook reference to the variables in TidyDataSet.txt
 * README.md : the analysis of the code in run_analysis.R
 
 ##Study design and data processing
@@ -18,7 +18,7 @@ The data linked to from the website represent data collected from the accelerome
 ##Creating the tidy datafile(running the code)
 
 ####Environment
-It's assumed that the dataset is already downloaded and unzip into local working R directory
+It's assumed that the dataset is already downloaded and unzip into local working R directory.
 
 `getwd()`
 `setwd("C:/Modul3/UCI_HAR_Dataset")`
@@ -32,7 +32,8 @@ The libraries used is data.table & dplyr. Installation might be required through
 
 ###1. Merges the training and the test sets to create one data set
 
-####Read data tables from files
+####Read data tables from files.
+
 `featuresTest<-read.table("test/X_test.txt")`
 `activityTest<-read.table("test/Y_test.txt")`
 `subjectTest<-read.table("test/subject_test.txt")`
@@ -41,7 +42,7 @@ The libraries used is data.table & dplyr. Installation might be required through
 `activityTrain<-read.table("train/Y_train.txt")`
 `subjectTrain<-read.table("train/subject_train.txt")`
 
-####Bind correlated data and merge into one data called mergedData using rbind & cbind. Then, check the dimension & header names to verify the merging is done properlly
+####Bind correlated data and merge into one data called mergedData using rbind & cbind. Then, check the dimension & header names to verify the merging is done properlly.
 
 `features <- rbind(featuresTest,featuresTrain)`
 `activity <- rbind(activityTest,activityTrain)`
@@ -56,17 +57,17 @@ The libraries used is data.table & dplyr. Installation might be required through
 
 `featuresNames <- read.table("features.txt")`
 
-####We want to exclude meanFreq(). hence need to grep mean() or std() only. "\\" need to be use because "()" is metacharacter. Then we append observations 562 & 563. Print to check the value is right.
+####We want to exclude meanFreq(). hence we need to grep mean() or std() only. "\\" need to be use because "()" is metacharacter. Then we append observations 562 & 563. Print to check the length of extractFeaturesList is 68 .
 
 `extractFeaturesList<-grep("std\\(\\)|mean\\(\\)",featuresNames$V2) %>% c(562,563)`
 `print(extractFeaturesList)`
 
-####Assign only as required features to the new featuresData
+####Assign only required features of mergedData to the Data
 
 `Data <- mergedData[,extractFeaturesList]`
 `head(Data)`
 
-####update data for featuresNames based on extractFeaturesList only. At the same time, we can assigned header name to activity & subject.
+####Update data of featuresNames based on extractFeaturesList only. At the same time, we assigned header name to activity & subject.
 
 `names(Data)<- featuresNames[extractFeaturesList, "V2"]`
 `names(Data)[67] <- "activity"`
@@ -83,7 +84,7 @@ The libraries used is data.table & dplyr. Installation might be required through
 `lapply(Data,class)`
 `lapply(activityNames,class)`
 
-####Replace Data$activity with respectives activityNames via looping. Then check updated values to verify the it is done properlly.
+####Replace Data$activity with respectives activityNames via looping. Then check updated values to verify the it is done properly(should replace 6 different integer to characters of 6 different activities).
 
 `for (i in 1:6){`
  ` Data$activity[Data$activity == i] <- as.character(activityNames[i,2])`
