@@ -61,18 +61,67 @@ The libraries used is data.table & dplyr. Installation might be required through
 `extractFeaturesList<-grep("std\\(\\)|mean\\(\\)",featuresNames$V2) %>% c(562,563)`
 `print(extractFeaturesList)`
 
-##assign only wanted features to new featuresData
-Data <- mergedData[,extractFeaturesList]
-head(Data)
-##update data for featuresNames based on extractFeaturesList only
-names(Data)<- featuresNames[extractFeaturesList, "V2"]
-names(Data)[67] <- "activity"
-names(Data)[68] <- "subject"
+####Assign only as required features to the new featuresData
 
+`Data <- mergedData[,extractFeaturesList]`
+`head(Data)`
 
+####update data for featuresNames based on extractFeaturesList only. At the same time, we can assigned header name to activity & subject.
 
-####
+`names(Data)<- featuresNames[extractFeaturesList, "V2"]`
+`names(Data)[67] <- "activity"`
+`names(Data)[68] <- "subject"`
 
+###3. Uses descriptive activity names to name the activities in the data set
+
+####This file contain 6 activities label
+
+`activityNames <- read.table("activity_labels.txt")`
+
+####Check Data$activity data types; integer. Then check Data$activityNames data types; factor
+
+`lapply(Data,class)`
+`lapply(activityNames,class)`
+
+####Replace Data$activity with respectives activityNames via looping. Then check updated values to verify the it is done properlly.
+
+`for (i in 1:6){`
+ ` Data$activity[Data$activity == i] <- as.character(activityNames[i,2])`
+`}`
+`unique(Data$activity)`
+
+####Set back Data$activity data types as factor
+
+`Data$activity <- as.factor(Data$activity)`
+
+###4. Appropriately labels the data set with descriptive variable names. 
+
+####Check for header names. Most of the labelling have been done previously
+names(Data) 
+####clean columns name from "()" parenthesis and hyphens signs. Then, capitalize Mean & STD for readability
+names(Data) <-gsub("\\(|\\)", "", names(Data))
+names(Data) <-gsub("\\-", ".", names(Data))
+names(Data)<-gsub("mean", "Mean", names(Data), ignore.case = TRUE)
+names(Data)<-gsub("std", "STD", names(Data), ignore.case = TRUE)
+names(Data) 
+
+###5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+####set subject as a factor
+Data$subject <- as.factor(Data$subject)
+####set Data to data.table type
+Data <- data.table(Data)
+####check Data$subject data types
+lapply(Data,class)
+
+#####Create tidyData with average for each activity and subject
+tidyData <- aggregate(. ~subject + activity, Data, mean)
+
+#####Order tidData according to subject and activity
+tidyData <- tidyData[order(tidyData$subject,tidyData$activity),]
+
+#####Write tidyData into a text file
+write.table(tidyData, file = "TidyDataSet.txt", row.names = FALSE)
 
 
 ##Description of the variables in the tiny_data.txt file
