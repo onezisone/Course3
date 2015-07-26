@@ -29,7 +29,9 @@ The data linked to from the website represent data collected from the accelerome
 It's assumed that the dataset is already downloaded and unzip into local working R directory.
 
 `getwd()`
+
 `setwd("C:/Modul3/UCI_HAR_Dataset")`
+
 `list.files()`
 
 ####Libraries Used
