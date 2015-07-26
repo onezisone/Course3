@@ -44,70 +44,37 @@ Output text file contains a tidy data set named TidyDataSet.txt; calculating ave
 It contains the following data:
 
 ######Measures: 
-Mean() and std() measures type average:
-- tBodyAcc_mean_X
-- tBodyAcc_mean_Y
-- tBodyAcc_mean_Z
-- tBodyAcc_std_X
-- tBodyAcc_std_Y
-- tBodyAcc_std_Z
-- tGravityAcc_mean_X
-- tGravityAcc_mean_Y
-- tGravityAcc_mean_Z
-- tGravityAcc_std_X
-- tGravityAcc_std_Y
-- tGravityAcc_std_Z
-- tBodyAccJerk_mean_X
-- tBodyAccJerk_mean_Y
-- tBodyAccJerk_mean_Z
-- tBodyAccJerk_std_X
-- tBodyAccJerk_std_Y
-- tBodyAccJerk_std_Z
-- tBodyGyro_mean_X
-- tBodyGyro_mean_Y
-- tBodyGyro_mean_Z
-- tBodyGyro_std_X
-- tBodyGyro_std_Y
-- tBodyGyro_std_Z
-- tBodyGyroJerk_mean_X
-- tBodyGyroJerk_mean_Y
-- tBodyGyroJerk_mean_Z
-- tBodyGyroJerk_std_X
-- tBodyGyroJerk_std_Y
-- tBodyGyroJerk_std_Z
-- tBodyAccMag_mean
-- tBodyAccMag_std
-- tGravityAccMag_mean
-- tGravityAccMag_std
-- tBodyAccJerkMag_mean
-- tBodyAccJerkMag_std
-- tBodyGyroMag_mean
-- tBodyGyroMag_std
-- tBodyGyroJerkMag_mean
-- tBodyGyroJerkMag_std
-- fBodyAcc_mean_X
-- fBodyAcc_mean_Y
-- fBodyAcc_mean_Z
-- fBodyAcc_std_X
-- fBodyAcc_std_Y
-- fBodyAcc_std_Z
-- fBodyAccJerk_mean_X
-- fBodyAccJerk_mean_Y
-- fBodyAccJerk_mean_Z
-- fBodyAccJerk_std_X
-- fBodyAccJerk_std_Y
-- fBodyAccJerk_std_Z
-- fBodyGyro_mean_X
-- fBodyGyro_mean_Y
-- fBodyGyro_mean_Z
-- fBodyGyro_std_X
-- fBodyGyro_std_Y
-- fBodyGyro_std_Z
-- fBodyAccMag_mean
-- fBodyAccMag_std
-- fBodyBodyAccJerkMag_mean
-- fBodyBodyAccJerkMag_std
-- fBodyBodyGyroMag_mean
-- fBodyBodyGyroMag_std
-- fBodyBodyGyroJerkMag_mean
-- fBodyBodyGyroJerkMag_std
+ [1] "tBodyAcc.Mean.X"           "tBodyAcc.Mean.Y"          
+ [3] "tBodyAcc.Mean.Z"           "tBodyAcc.STD.X"           
+ [5] "tBodyAcc.STD.Y"            "tBodyAcc.STD.Z"           
+ [7] "tGravityAcc.Mean.X"        "tGravityAcc.Mean.Y"       
+ [9] "tGravityAcc.Mean.Z"        "tGravityAcc.STD.X"        
+[11] "tGravityAcc.STD.Y"         "tGravityAcc.STD.Z"        
+[13] "tBodyAccJerk.Mean.X"       "tBodyAccJerk.Mean.Y"      
+[15] "tBodyAccJerk.Mean.Z"       "tBodyAccJerk.STD.X"       
+[17] "tBodyAccJerk.STD.Y"        "tBodyAccJerk.STD.Z"       
+[19] "tBodyGyro.Mean.X"          "tBodyGyro.Mean.Y"         
+[21] "tBodyGyro.Mean.Z"          "tBodyGyro.STD.X"          
+[23] "tBodyGyro.STD.Y"           "tBodyGyro.STD.Z"          
+[25] "tBodyGyroJerk.Mean.X"      "tBodyGyroJerk.Mean.Y"     
+[27] "tBodyGyroJerk.Mean.Z"      "tBodyGyroJerk.STD.X"      
+[29] "tBodyGyroJerk.STD.Y"       "tBodyGyroJerk.STD.Z"      
+[31] "tBodyAccMag.Mean"          "tBodyAccMag.STD"          
+[33] "tGravityAccMag.Mean"       "tGravityAccMag.STD"       
+[35] "tBodyAccJerkMag.Mean"      "tBodyAccJerkMag.STD"      
+[37] "tBodyGyroMag.Mean"         "tBodyGyroMag.STD"         
+[39] "tBodyGyroJerkMag.Mean"     "tBodyGyroJerkMag.STD"     
+[41] "fBodyAcc.Mean.X"           "fBodyAcc.Mean.Y"          
+[43] "fBodyAcc.Mean.Z"           "fBodyAcc.STD.X"           
+[45] "fBodyAcc.STD.Y"            "fBodyAcc.STD.Z"           
+[47] "fBodyAccJerk.Mean.X"       "fBodyAccJerk.Mean.Y"      
+[49] "fBodyAccJerk.Mean.Z"       "fBodyAccJerk.STD.X"       
+[51] "fBodyAccJerk.STD.Y"        "fBodyAccJerk.STD.Z"       
+[53] "fBodyGyro.Mean.X"          "fBodyGyro.Mean.Y"         
+[55] "fBodyGyro.Mean.Z"          "fBodyGyro.STD.X"          
+[57] "fBodyGyro.STD.Y"           "fBodyGyro.STD.Z"          
+[59] "fBodyAccMag.Mean"          "fBodyAccMag.STD"          
+[61] "fBodyBodyAccJerkMag.Mean"  "fBodyBodyAccJerkMag.STD"  
+[63] "fBodyBodyGyroMag.Mean"     "fBodyBodyGyroMag.STD"     
+[65] "fBodyBodyGyroJerkMag.Mean" "fBodyBodyGyroJerkMag.STD" 
+[67] "activity"                  "subject"
