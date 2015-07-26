@@ -42,39 +42,73 @@ Output text file contains a tidy data set named TidyDataSet.txt; calculating ave
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 ######The header of TidyDataSet.txt has been rename according to Tidy Data rule by replacing parenthesis & hyphens signs: 
-"activity"                  "subject"
-"tBodyAcc.Mean.X"           "tBodyAcc.Mean.Y"          
-"tBodyAcc.Mean.Z"           "tBodyAcc.STD.X"           
-"tBodyAcc.STD.Y"            "tBodyAcc.STD.Z"           
-"tGravityAcc.Mean.X"        "tGravityAcc.Mean.Y"       
-"tGravityAcc.Mean.Z"        "tGravityAcc.STD.X"        
-"tGravityAcc.STD.Y"         "tGravityAcc.STD.Z"        
-"tBodyAccJerk.Mean.X"       "tBodyAccJerk.Mean.Y"      
-"tBodyAccJerk.Mean.Z"       "tBodyAccJerk.STD.X"       
-"tBodyAccJerk.STD.Y"        "tBodyAccJerk.STD.Z"       
-"tBodyGyro.Mean.X"          "tBodyGyro.Mean.Y"         
-"tBodyGyro.Mean.Z"          "tBodyGyro.STD.X"          
-"tBodyGyro.STD.Y"           "tBodyGyro.STD.Z"          
-"tBodyGyroJerk.Mean.X"      "tBodyGyroJerk.Mean.Y"     
-"tBodyGyroJerk.Mean.Z"      "tBodyGyroJerk.STD.X"      
-"tBodyGyroJerk.STD.Y"       "tBodyGyroJerk.STD.Z"      
-"tBodyAccMag.Mean"          "tBodyAccMag.STD"          
-"tGravityAccMag.Mean"       "tGravityAccMag.STD"       
-"tBodyAccJerkMag.Mean"      "tBodyAccJerkMag.STD"      
-"tBodyGyroMag.Mean"         "tBodyGyroMag.STD"         
-"tBodyGyroJerkMag.Mean"     "tBodyGyroJerkMag.STD"     
-"fBodyAcc.Mean.X"           "fBodyAcc.Mean.Y"          
-"fBodyAcc.Mean.Z"           "fBodyAcc.STD.X"           
-"fBodyAcc.STD.Y"            "fBodyAcc.STD.Z"           
-"fBodyAccJerk.Mean.X"       "fBodyAccJerk.Mean.Y"      
-"fBodyAccJerk.Mean.Z"       "fBodyAccJerk.STD.X"       
-"fBodyAccJerk.STD.Y"        "fBodyAccJerk.STD.Z"       
-"fBodyGyro.Mean.X"          "fBodyGyro.Mean.Y"         
-"fBodyGyro.Mean.Z"          "fBodyGyro.STD.X"          
-"fBodyGyro.STD.Y"           "fBodyGyro.STD.Z"          
-"fBodyAccMag.Mean"          "fBodyAccMag.STD"          
-"fBodyBodyAccJerkMag.Mean"  "fBodyBodyAccJerkMag.STD"  
-"fBodyBodyGyroMag.Mean"     "fBodyBodyGyroMag.STD"     
-"fBodyBodyGyroJerkMag.Mean" "fBodyBodyGyroJerkMag.STD" 
+activity
+subject
+tBodyAcc.Mean.X           
+tBodyAcc.Mean.Y          
+tBodyAcc.Mean.Z           
+tBodyAcc.STD.X           
+tBodyAcc.STD.Y            
+tBodyAcc.STD.Z           
+tGravityAcc.Mean.X       
+tGravityAcc.Mean.Y      
+tGravityAcc.Mean.Z       
+tGravityAcc.STD.X        
+tGravityAcc.STD.Y         
+tGravityAcc.STD.Z        
+tBodyAccJerk.Mean.X      
+tBodyAccJerk.Mean.Y      
+tBodyAccJerk.Mean.Z       
+tBodyAccJerk.STD.X       
+tBodyAccJerk.STD.Y       
+tBodyAccJerk.STD.Z      
+tBodyGyro.Mean.X        
+tBodyGyro.Mean.Y       
+tBodyGyro.Mean.Z         
+tBodyGyro.STD.X          
+tBodyGyro.STD.Y          
+tBodyGyro.STD.Z          
+tBodyGyroJerk.Mean.X      
+tBodyGyroJerk.Mean.Y     
+tBodyGyroJerk.Mean.Z     
+tBodyGyroJerk.STD.X     
+tBodyGyroJerk.STD.Y      
+tBodyGyroJerk.STD.Z     
+tBodyAccMag.Mean         
+tBodyAccMag.STD         
+tGravityAccMag.Mean       
+tGravityAccMag.STD       
+tBodyAccJerkMag.Mean      
+tBodyAccJerkMag.STD      
+tBodyGyroMag.Mean        
+tBodyGyroMag.STD         
+tBodyGyroJerkMag.Mean     
+tBodyGyroJerkMag.STD     
+fBodyAcc.Mean.X           
+fBodyAcc.Mean.Y          
+fBodyAcc.Mean.Z          
+fBodyAcc.STD.X           
+fBodyAcc.STD.Y            
+fBodyAcc.STD.Z          
+fBodyAccJerk.Mean.X       
+fBodyAccJerk.Mean.Y      
+fBodyAccJerk.Mean.Z       
+fBodyAccJerk.STD.X       
+fBodyAccJerk.STD.Y        
+fBodyAccJerk.STD.Z       
+fBodyGyro.Mean.X          
+fBodyGyro.Mean.Y         
+fBodyGyro.Mean.Z          
+fBodyGyro.STD.X          
+fBodyGyro.STD.Y           
+fBodyGyro.STD.Z          
+fBodyAccMag.Mean          
+fBodyAccMag.STD          
+fBodyBodyAccJerkMag.Mean  
+fBodyBodyAccJerkMag.STD  
+fBodyBodyGyroMag.Mean     
+fBodyBodyGyroMag.STD     
+fBodyBodyGyroJerkMag.Mean 
+fBodyBodyGyroJerkMag.STD 
 
 
