@@ -1,22 +1,18 @@
----
-title: "Codebook template"
-author: "Your name here"
-date: "The date here"
-output:
-  html_document:
-    keep_md: yes
----
-
 ## Project Description
-Short description of the project
+As part of project requirement in "Getting and Cleaning Data" course, this R code generates tidy data text file based on data collected from  the Samsung Galaxy S smartphone calculating average of all measures by each activity and subjects
+In this repository, you find:
+
+run_analysis.R : the R-code run on the data set
+Tidy.txt : the clean data extracted from the original data using run_analysis.R
+CodeBook.md : the CodeBook reference to the variables in Tidy.txt
+README.md : the analysis of the code in run_analysis.R
 
 ##Study design and data processing
 
 ###Collection of the raw data
-Description of how the data was collected.
+The dataset used are obtained from "Human Activity Recognition Using Smartphones Data Set" with full description is available at their website: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-###Notes on the original (raw) data 
-Some additional notes (if avaialble, otherwise you can leave this section out).
+The data linked to from the website represent data collected from the accelerometers from the Samsung Galaxy S smartphone and can be downloaded from here: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
 
 ##Creating the tidy datafile
 
