@@ -15,14 +15,14 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 
 The input data inside the zip folder contains following data:
 
--X_train.txt contains variable features that are intended for training.
--y_train.txt contains the activities corresponding to X_train.txt.
--subject_train.txt contains information on the subjects from whom data is collected.
--X_test.txt contains variable features that are intended for testing.
--y_test.txt contains the activities corresponding to X_test.txt.
--subject_test.txt contains information on the subjects from whom data is collected.
--activity_labels.txt contains metadata on the different types of activities.
--features.txt contains the name of the features in the data sets. 
+*X_train.txt contains variable features that are intended for training.
+*y_train.txt contains the activities corresponding to X_train.txt.
+*subject_train.txt contains information on the subjects from whom data is collected.
+*X_test.txt contains variable features that are intended for testing.
+*y_test.txt contains the activities corresponding to X_test.txt.
+*subject_test.txt contains information on the subjects from whom data is collected.
+*activity_labels.txt contains metadata on the different types of activities.
+*features.txt contains the name of the features in the data sets. 
 
 For each record it is provided:
 
