@@ -96,38 +96,49 @@ The libraries used is data.table & dplyr. Installation might be required through
 
 ###4. Appropriately labels the data set with descriptive variable names. 
 
-####Check for header names. Most of the labelling have been done previously
-names(Data) 
-####clean columns name from "()" parenthesis and hyphens signs. Then, capitalize Mean & STD for readability
-names(Data) <-gsub("\\(|\\)", "", names(Data))
-names(Data) <-gsub("\\-", ".", names(Data))
-names(Data)<-gsub("mean", "Mean", names(Data), ignore.case = TRUE)
-names(Data)<-gsub("std", "STD", names(Data), ignore.case = TRUE)
-names(Data) 
+####Check for header names. Most of the labelling has been done previously
+
+`names(Data) `
+
+####Clean columns name from "()" parenthesis and hyphens signs. Then, capitalize Mean & STD for readability
+
+`names(Data) <-gsub("\\(|\\)", "", names(Data))`
+`names(Data) <-gsub("\\-", ".", names(Data))`
+`names(Data)<-gsub("mean", "Mean", names(Data), ignore.case = TRUE)`
+`names(Data)<-gsub("std", "STD", names(Data), ignore.case = TRUE)`
+`names(Data)`
 
 ###5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-####set subject as a factor
-Data$subject <- as.factor(Data$subject)
-####set Data to data.table type
-Data <- data.table(Data)
-####check Data$subject data types
-lapply(Data,class)
+####Set subject as a factor and set Data to data.table type for data manipulation later on
 
-#####Create tidyData with average for each activity and subject
-tidyData <- aggregate(. ~subject + activity, Data, mean)
+`Data$subject <- as.factor(Data$subject)`
+`Data <- data.table(Data)`
 
-#####Order tidData according to subject and activity
-tidyData <- tidyData[order(tidyData$subject,tidyData$activity),]
+####check Data$subject data types; factor
+
+`lapply(Data,class)`
+
+#####Create Tidy Data with average for each activity and subject
+
+`tidyData <- aggregate(. ~subject + activity, Data, mean)`
+
+#####Order Tidy Data according to subject and activity
+
+`tidyData <- tidyData[order(tidyData$subject,tidyData$activity),]`
 
 #####Write tidyData into a text file
-write.table(tidyData, file = "TidyDataSet.txt", row.names = FALSE)
+
+`write.table(tidyData, file = "TidyDataSet.txt", row.names = FALSE)`
 
 
 ##Description of the variables in the tiny_data.txt file
-General description of the file including:
+General description of the file:
  - Dimensions of the dataset
+ * 10299 x 68
  - Summary of the data
+ * fdfdf 
  - Variables present in the dataset
+ * Refer to CodeBook.md in this repository
 
 
