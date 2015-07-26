@@ -124,18 +124,20 @@ Create Tidy Data with average for each activity and subject
 
 `tidyData <- aggregate(. ~subject + activity, Data, mean)`
 
-Order Tidy Data according to subject and activity
+Order Tidy Data according to subject and activity and Write tidyData into a text file
 
 `tidyData <- tidyData[order(tidyData$subject,tidyData$activity),]`
-
-Write tidyData into a text file
-
 `write.table(tidyData, file = "TidyDataSet.txt", row.names = FALSE)`
 
 
-##Description of the variables in the tiny_data.txt file
+##Description of the variables in the TinyDataSet.txt file
 General description of the file:
- - Dimensions of the dataset: 10299 x 68
- - Variables present in the dataset: Refer to CodeBook.md in this repository
+ - Dimensions of the dataset:
+ 
+`10299 x 68`
+
+ - Variables present in the dataset: 
+ 
+`Refer to CodeBook.md in this repository`
 
 
